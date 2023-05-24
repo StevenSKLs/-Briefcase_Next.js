@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-const withMT = require("@material-tailwind/react/utils/withMT");
- 
+const withMT = require('@material-tailwind/react/utils/withMT');
+
 module.exports = withMT({
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -30,6 +30,13 @@ module.exports = withMT({
       fontFamily: {
         nunito: ['Nunito'],
         mulish: ['Mulish'],
+      },
+      keyframes: {
+        wiggle: {
+          '0%': { boxShadow: '0 0 20px 13px #04edcd' },
+          '50%': { boxShadow: '0 0 6px #04edcd, 0 0 6px #04edcd' },
+          '100%': { boxShadow: '0 0 20px 13px #04edcd' },
+        },
       },
     },
     plugins: [],
