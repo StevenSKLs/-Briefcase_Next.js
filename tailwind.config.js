@@ -32,13 +32,18 @@ module.exports = withMT({
         mulish: ['Mulish'],
       },
       keyframes: {
-        wiggle: {
-          '0%': { boxShadow: '0 0 20px 13px #04edcd' },
-          '50%': { boxShadow: '0 0 6px #04edcd, 0 0 6px #04edcd' },
-          '100%': { boxShadow: '0 0 20px 13px #04edcd' },
+        glow1: {
+          '0%': { boxShadow: '0 0 20px 13px #0b9aff' },
+          '50%': { boxShadow: '0 0 6px #0b9aff, 0 0 6px #0b9aff' },
+          '100%': { boxShadow: '0 0 20px 13px #0b9aff' },
+        },
+        glow2: {
+          '0%': { boxShadow: '0 0 20px 13px #45B1D7' },
+          '50%': { boxShadow: '0 0 6px #45B1D7, 0 0 6px #45B1D7' },
+          '100%': { boxShadow: '0 0 20px 13px #45B1D7' },
         },
       },
     },
-    plugins: [],
   },
+  plugins: [require('tailwind-scrollbar')],
 });
