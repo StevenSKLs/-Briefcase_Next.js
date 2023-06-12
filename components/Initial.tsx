@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image";
 import Cicles from './Cicles';
 import TextsInitial from "./Texts-Initial";
+
 
 const Initial = () => {
     return (
