@@ -40,6 +40,8 @@ const Person = () => {
                         <div className='rounded-[2vh] bg_3 p-[1rem] '>
                             <h1 className='text-red font-semibold text-[3vh]  '>Hola, Soy Steven David Rojas Miño</h1>
                             <br />
+                            <h1 className='text-red font-semibold text-[2vh]  '>Ecuador, Quito</h1>
+                            <br />
                             <h1 className='text-red nunito'>2001/05/12</h1>
                             <br />
                             <p

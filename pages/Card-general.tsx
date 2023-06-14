@@ -1,14 +1,12 @@
-// "use client"
+"use client"
+import ContactMe from "@/components/ContactMe";
+import WorkExperience from "@/components/WorkExperience";
 import Head from "next/head";
 import Certifics from "../components/Certifics";
 import Initial from "../components/Initial";
 import Person from "../components/Person";
-import Proyects from "../components/SectionProyects";
+import Proyects from "../components/SectionProjects";
 import SectionSkills from "../components/SectionSkills";
-
-
-
-
 
 const CardGeneral = () => {
 
@@ -16,7 +14,7 @@ const CardGeneral = () => {
     <>
       <Head>
         <title>Portafolio.TSX</title>
-
+        <link rel="icon" href="/imgs/city13.png" />
       </Head>
       <div className="snap-mandatory snap-y h-screen w-full overflow-auto scrollbar scrollbar-thumb-[#e73f3f] scrollbar-track-gray-300 ">
 
@@ -25,17 +23,20 @@ const CardGeneral = () => {
         <SectionSkills />
         <Proyects />
         <Certifics />
+        <WorkExperience />
+        <ContactMe />
 
 
-
-        <div className="snap-center h-screen w-full bg-black">
-
-
-        </div>
       </div>
 
 
-      {/* 
+
+    </>
+  );
+};
+
+export default CardGeneral;
+/* 
       <div className='lineEffect'>
         <p className="hover-underline-animation">
           Desarrollador web full-stack interesado por el arte y las tecnologías, me he preparado para culminar el curso full- stack de Academlo y también tengo conocimientos en la área de mecánica automotriz y electromecánica. Gracias al aprendizaje adquirido en Academlo estoy buscando aportar el conocimiento inculcado y formar parte de un grupo de trabajo en desarrollo web. Tengo conocimiento en la programación en Html, Css, Js, React.js y Node.js.</p>
@@ -48,9 +49,4 @@ const CardGeneral = () => {
             <h1>hola mundo</h1>
           </div>
         </div>
-      </div> */}
-    </>
-  );
-};
-
-export default CardGeneral;
+      </div> */
