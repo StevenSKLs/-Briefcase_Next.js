@@ -14,7 +14,7 @@ const SectionProjects = () => {
             <style jsx>{
                 `
     .bg_4{
-         background: linear-gradient(108deg,rgb(249 249 249/48%)33%,rgba(252,252,252,1)53%,rgb(141 138 138)100%)
+         background: linear-gradient(110deg, rgba(252,252,252,0.2189250700280112) 8%, rgba(252,252,252,1) 18%, rgb(147 147 147) 63%)
     }
    .bg_3{
     background: linear-gradient(270deg, rgba(172,172,172,0.6558998599439776) 0%, rgba(255,255,255,0.6979166666666667) 23%)
@@ -40,7 +40,7 @@ const SectionProjects = () => {
                     <h1 className='text-red text-[2rem] top-[9px] left-[2%] nunito absolute'>Proyectos</h1>
 
                     <div
-                        className=" w-full flex space-x-5 overflow-x-scroll p-[1.40rem] snap-x snap-mandatory h-[91vh] "
+                        className=" w-full flex space-x-5 overflow-x-scroll p-[1.40rem] snap-x snap-mandatory h-[91vh] scrollbar  scrollbar-thumb-[#F7A00A]/80 scrollbar-track-[#F7A00A]/0 "
                     >
                         <Projects />
                     </div>

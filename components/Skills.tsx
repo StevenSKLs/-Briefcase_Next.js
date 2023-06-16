@@ -22,7 +22,7 @@ const Skills = ({ directionLeft }: Props) => {
 
                                 src={skills.img} alt={skills.alt}
 
-                                className=" rounded-[20px] border border-white object-cover w-24 h-24 filter group-hover:grayscale transition duration-3000 ease-in-out"
+                                className=" rounded-[20px] border border-white object-cover sm:w-24 sm:h-24 filter group-hover:grayscale transition duration-3000 ease-in-out"
                                 style={{ background: 'linear-gradient(295deg, rgba(163,163,163,0.8407738095238095) 0%, rgba(255,255,255,0.6979166666666667) 41%)' }}
                             />
                             <div className="rounded-[20px] absolute opacity-0 group-hover:opacity-90 transtion duration-300 ease-in-out group-hover:bg-white h-24 z-0  ">

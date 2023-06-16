@@ -18,8 +18,8 @@ const SectionSkills = () => {
             }
             </style>
             <div className="bg_5 relative " >
-                <div className='absolute h-[37vh] w-[41vh] top-[0] z-[0] '>
-                    <Image src={'/imgs/city20.png'} alt="user" fill />
+                <div className='absolute top-[0] z-[0] h-[65vh] w-[23vh] sm:h-[93vh] sm:w-[100vh] '>
+                    <Image src={'/imgs/city29.png'} alt="user" fill />
                 </div>
                 <motion.div
                     initial={{
@@ -33,13 +33,13 @@ const SectionSkills = () => {
                     className="flex relative flex-col text-venter snap-center h-screen w-full justify-center items-center z-[3]"
                 >
                     <h1 className='text-red text-[2rem] top-[12px] left-[2%] nunito absolute'>Habilidades y tiempo</h1>
-                    <div className="grid grid-cols-4 gap-[2rem]  ">
+                    <div className="grid grid-cols-4 gap-[1rem] sm:gap-[2rem] z-[1] ">
                         <Skills />
 
                     </div>
-                    <div className='absolute h-[70vh] w-[70vh] top-[15vh] z-[0] '>
+                    {/* <div className='absolute h-[70vh] w-[70vh] top-[15vh] z-[0] '>
                         <Image src={'/imgs/city25.png'} alt="user" fill />
-                    </div>
+                    </div> */}
                 </motion.div>
 
             </div>

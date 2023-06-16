@@ -39,7 +39,7 @@ const Certifics = () => {
                 className=' snap-center h-screen w-full flex justify-center items-center relative'
 
             >
-
+                <h1 className='text-red text-[2rem] top-[9px] left-[2%] nunito absolute z-[3]'>Cursos Online</h1>
 
 
                 <Swiper

@@ -18,8 +18,8 @@ const Person = () => {
             </style>
             <div className="snap-center h-screen w-full bg_2 relative">
                 <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] nunito'>Acerca de mí</h1>
-                <div className='absolute h-[37vh] w-[41vh] top-[63%] z-[0] '>
-                    <Image src={'/imgs/city11.png'} alt="user" fill />
+                <div className='absolute h-[65vh] w-[23vh] top-[35%] sm:h-[93vh] sm:w-[100vh] sm:top-[43px] z-[0] '>
+                    <Image src={'/imgs/city30.png'} alt="user" fill />
                 </div>
 
 
@@ -36,8 +36,8 @@ const Person = () => {
                         transition={{
                             duration: 1.4
                         }}
-                        className='flex gap-[8vw] z-[2]'>
-                        <div className='rounded-[2vh] bg_3 p-[1rem] '>
+                        className='flex gap-[8vw] z-[2] items-center flex-col sm:flex-row sm:items-start '>
+                        <div className='rounded-[2vh] bg_3 p-[1rem] order-2 sm:order-1 '>
                             <h1 className='text-red font-semibold text-[3vh]  '>Hola, Soy Steven David Rojas Miño</h1>
                             <br />
                             <h1 className='text-red font-semibold text-[2vh]  '>Ecuador, Quito</h1>
@@ -45,7 +45,7 @@ const Person = () => {
                             <h1 className='text-red nunito'>2001/05/12</h1>
                             <br />
                             <p
-                                className='flex-shrink-0 object-cover h-[55vh] w-[55vh] mulish text-justify'
+                                className='flex-shrink-0 object-cover sm:h-[55vh] w-[55vh] mulish text-justify'
                             >
                                 Desarrollador web full-stack interesado por el arte y las tecnologías,
                                 me he preparado para culminar el curso full-stack de Academlo y también tengo conocimientos
@@ -76,7 +76,7 @@ const Person = () => {
                                     once: true
                                 }}
                                 src="/others/user.jpeg" alt="hola"
-                                className='flex-shrink-0 w-[37vh] rounded-full object-cover z-[2]'
+                                className='flex-shrink-0 w-[37vh] rounded-full object-cover z-[2] order-1'
                             />
 
 
@@ -84,7 +84,7 @@ const Person = () => {
                     </motion.div>
 
 
-                    <div className='absolute h-[95vh] w-[100vh] top-0 z-[0] '>
+                    <div className='absolute h-[75vh] w-[40vh] sm:h-[95vh] sm:w-[100vh] top-0 z-[0] '>
                         <Image src={'/imgs/city9.png'} alt="user" fill />
                     </div>
                 </div>
