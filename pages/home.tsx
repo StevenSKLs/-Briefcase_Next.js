@@ -8,7 +8,7 @@ import Person from "../components/Person";
 import Proyects from "../components/SectionProjects";
 import SectionSkills from "../components/SectionSkills";
 
-const CardGeneral = () => {
+const Home = () => {
 
   return (
     <>
@@ -16,26 +16,22 @@ const CardGeneral = () => {
         <title>Portafolio.TSX</title>
         <link rel="icon" href="/imgs/city13.png" />
       </Head>
-      <div className="snap-mandatory snap-y h-screen w-full overflow-auto scrollbar scrollbar-thumb-[#e73f3f] scrollbar-track-gray-300 ">
+      <div className="snap-mandatory snap-y h-screen w-full overflow-auto sm:scrollbar sm:scrollbar-thumb-[#e73f3f] sm:scrollbar-track-gray-300 ">
 
         <Initial />
         <Person />
         <SectionSkills />
         <Proyects />
-        <Certifics />
         <WorkExperience />
+        <Certifics />
         <ContactMe />
 
-
       </div>
-
-
-
     </>
   );
 };
 
-export default CardGeneral;
+export default Home;
 /* 
       <div className='lineEffect'>
         <p className="hover-underline-animation">

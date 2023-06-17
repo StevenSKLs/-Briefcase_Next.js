@@ -1,9 +1,9 @@
-import CardGeneral from "./Card-general";
+import Home from "./home";
 export default function Home_index() {
   return (
 
     <>
-      <CardGeneral />
+      <Home />
     </>
 
 

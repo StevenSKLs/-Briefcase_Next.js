@@ -48,5 +48,4 @@ const TextsInitial = () => {
 export default TextsInitial;
 
 
-//Overpass
 

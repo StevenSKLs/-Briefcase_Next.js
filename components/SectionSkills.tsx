@@ -29,7 +29,6 @@ const SectionSkills = () => {
                     transition={{ duretion: 1 }}
                     whileInView={{ opacity: 1 }}
 
-
                     className="flex relative flex-col text-venter snap-center h-screen w-full justify-center items-center z-[3]"
                 >
                     <h1 className='text-red text-[2rem] top-[12px] left-[2%] nunito absolute'>Habilidades y tiempo</h1>

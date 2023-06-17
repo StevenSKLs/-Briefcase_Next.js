@@ -15,12 +15,12 @@ import { EffectCoverflow, Pagination } from "swiper";
 const Certifics = () => {
     return (
         <>
-            <style jsx>{
+            <style jsx global>{
                 `
                 .bg_4 {
                     background: linear-gradient(180deg, rgba(163,163,163,0.8407738095238095) 0%, rgba(255,255,255,0.6979166666666667) 41%)
                 }
-    
+            
    
     `
             }

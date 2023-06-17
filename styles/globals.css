@@ -34,7 +34,7 @@
   --swiper-theme-color: #ffffff !important;
 }
 
-.swiper {
+/* .swiper {
   width: 100% !important ;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -50,16 +50,17 @@
 .swiper-slide img {
   display: block;
   width: 100%;
+} */
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-wrapper {
-  width: 55vh !important ;
+  width: 55% !important ;
 }
-
-
-
-
-
 
 .lineEffect {
   width: 290px;

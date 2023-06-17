@@ -36,16 +36,16 @@ const Person = () => {
                         transition={{
                             duration: 1.4
                         }}
-                        className='flex gap-[8vw] z-[2] items-center flex-col sm:flex-row sm:items-start '>
+                        className='flex gap-[1vw] sm:gap-[8vw] z-[2] items-center flex-col sm:flex-row sm:items-start '>
                         <div className='rounded-[2vh] bg_3 p-[1rem] order-2 sm:order-1 '>
                             <h1 className='text-red font-semibold text-[3vh]  '>Hola, Soy Steven David Rojas Miño</h1>
-                            <br />
+
                             <h1 className='text-red font-semibold text-[2vh]  '>Ecuador, Quito</h1>
-                            <br />
+
                             <h1 className='text-red nunito'>2001/05/12</h1>
-                            <br />
+
                             <p
-                                className='flex-shrink-0 object-cover sm:h-[55vh] w-[55vh] mulish text-justify'
+                                className='flex-shrink-0 object-cover text-[16px] sm:h-[50vh] sm:w-[50vh] mulish text-justify'
                             >
                                 Desarrollador web full-stack interesado por el arte y las tecnologías,
                                 me he preparado para culminar el curso full-stack de Academlo y también tengo conocimientos
@@ -57,9 +57,7 @@ const Person = () => {
                             </p>
 
                         </div>
-                        <div
-
-                        >
+                        <div className='order-1' >
                             <motion.img
                                 initial={{
                                     x: -200,
@@ -76,7 +74,7 @@ const Person = () => {
                                     once: true
                                 }}
                                 src="/others/user.jpeg" alt="hola"
-                                className='flex-shrink-0 w-[37vh] rounded-full object-cover z-[2] order-1'
+                                className='flex-shrink-0 w-[15vh] sm:w-[37vh] rounded-full object-cover z-[2]'
                             />
 
 

@@ -89,7 +89,7 @@ const ProjectsArray: Projects[] = [
     description:
       'Primer proyecto personal de mi portafolio hecho con Next.js, este proyecto es personal y continuo actualizándolo para mejorarlo en algunos aspectos. Es mi primer enfoque al mundo del typescript y al mundo laboral.',
     urlGithub: 'https://github.com/StevenSKLs/-Briefcase_Next.js',
-    deployments: 'https://briefcase-next-akh5psjtp-stevenskls.vercel.app/',
+    deployments: 'https://briefcase-next-js-git-main-stevenskls.vercel.app/',
   },
 ];
 
