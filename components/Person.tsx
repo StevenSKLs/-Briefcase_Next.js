@@ -1,3 +1,4 @@
+import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -17,7 +18,8 @@ const Person = () => {
             }
             </style>
             <div className="snap-center h-screen w-full bg_2 relative">
-                <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] nunito'>Acerca de mí</h1>
+
+                <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] z-[3] nunito'>Acerca de mí</h1>
                 <div className='absolute h-[65vh] w-[23vh] top-[35%] sm:h-[93vh] sm:w-[100vh] sm:top-[43px] z-[0] '>
                     <Image src={'/imgs/city30.png'} alt="user" fill />
                 </div>
@@ -77,7 +79,14 @@ const Person = () => {
                                 className='flex-shrink-0 w-[15vh] sm:w-[37vh] rounded-full object-cover z-[2]'
                             />
 
-
+                            <div className=" flex gap-1 ">
+                                <a href="/cv/CV-Next.pdf" download >
+                                    <Button color="blue-gray">Descargar CV</Button>
+                                </a>
+                                <a href="/cv/CV-Next.pdf" target="_blank" >
+                                    <Button color="deep-purple">Ver CV</Button>
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
 

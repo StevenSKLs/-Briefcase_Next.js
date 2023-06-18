@@ -12,7 +12,7 @@ const WorkExperience = () => {
         >
             <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] nunito'>Experiencia Laboral</h1>
             <div className="flex gap-3 mt-[1rem] ">
-                <Card className="w-full max-w-[26rem] shadow-lg  h-[86%] ">
+                <Card className="w-full max-w-[26rem] shadow-lg  ">
                     <CardHeader floated={false} color="blue-gray">
                         <img
                             src="/others/Banco-Ecu.jpg"
@@ -36,7 +36,7 @@ const WorkExperience = () => {
                     </CardBody>
 
                 </Card>
-                <Card className="w-full max-w-[26rem] shadow-lg h-[86%] ">
+                <Card className="w-full max-w-[26rem] shadow-lg ">
                     <CardHeader floated={false} color="blue-gray">
                         <img
                             src="/others/coworking_front-end4.png"
