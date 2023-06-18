@@ -45,7 +45,7 @@ const Person = () => {
                             <h1 className='text-red nunito'>2001/05/12</h1>
 
                             <p
-                                className='flex-shrink-0 object-cover text-[16px] sm:h-[50vh] sm:w-[50vh] mulish text-justify'
+                                className='flex-shrink-0 object-cover text-[98%] sm:text-[16px] sm:h-[50vh] sm:w-[50vh] mulish text-justify'
                             >
                                 Desarrollador web full-stack interesado por el arte y las tecnologías,
                                 me he preparado para culminar el curso full-stack de Academlo y también tengo conocimientos

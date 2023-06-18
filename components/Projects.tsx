@@ -31,7 +31,7 @@ const Projects = () => {
                 {
                     ProjectsArray.map((project) => {
                         return (
-                            <SwiperSlide key={project.title}>
+                            <SwiperSlide key={project.title} className="w-[70%]" >
                                 <Card
                                     shadow={false}
                                     className="relative grid h-[37rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center mt-3 "
@@ -45,20 +45,22 @@ const Projects = () => {
                                         <Image src={project.img} alt={project.alt} fill />
                                         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
                                     </CardHeader>
-                                    <CardBody className="relative py-14 px-6 md:px-12 h-full ">
+                                    <CardBody className="relative py-14 px-6 md:px-12 text-white h-full flex justify-center "
+                                        style={{ textShadow: '-2px 3px 0 #000000' }}
+                                    >
                                         <Typography
                                             variant="h2"
                                             color="white"
-                                            className="mb-6 font-medium leading-[1.5]"
+                                            className="mb-6 font-medium leading-[1.5] absolute"
                                         >
                                             {project.title}
                                         </Typography>
-                                        <Typography variant="h5" className="mb-4 text-gray-400 text-[14px]  " >
+                                        <Typography variant="h5" className="mt-[6rem] text-[14px]  " >
                                             {project.description}
                                         </Typography>
-                                        <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                                        <div className="group mt-8 inline-flex flex-wrap items-center absolute top-[75%] gap-3">
 
-                                            <Tooltip content="2 bedrooms">
+                                            <Tooltip content="GitHub">
 
                                                 <Link href={project.deployments} target="_blank" >
                                                     <Avatar
@@ -66,18 +68,18 @@ const Projects = () => {
                                                         variant="circular"
                                                         alt="candice wu"
                                                         className="border-2 border-white"
-                                                        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                                                        src="/others/github.png"
                                                     />
                                                 </Link>
                                             </Tooltip>
-                                            <Tooltip content="And +20 more">
+                                            <Tooltip content="Deploy">
                                                 <Link href={project.urlGithub} target="_blank" >
                                                     <Avatar
                                                         size="xl"
                                                         variant="circular"
                                                         alt="candice wu"
                                                         className="border-2 border-white"
-                                                        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                                                        src="/others/deploy2.png"
                                                     />
                                                 </Link>
                                             </Tooltip>

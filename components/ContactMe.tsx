@@ -28,7 +28,7 @@ const ContactMe = () => {
             <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] nunito'>Contacteme</h1>
 
 
-            <Card color="transparent" shadow={false}>
+            <Card color="transparent" shadow={false} className=" w-[46vh] " >
                 <Typography variant="h4" color="blue-gray">
                     Medio de comunicación
                 </Typography>
@@ -40,12 +40,7 @@ const ContactMe = () => {
                     <div className="mb-4 flex flex-col gap-6">
                         <Input size="lg" label="Name" {...register("name")} />
                         <Input size="lg" label="Tema" {...register("subjet")} />
-
-                        <div className="w-96">
-                            <Textarea label="Message" {...register("message")} />
-                        </div>
-
-
+                        <Textarea size="lg" label="Message" {...register("message")} />
                     </div>
 
 
@@ -56,7 +51,9 @@ const ContactMe = () => {
 
                 </form>
             </Card>
-
+            <a href="/cv/CV-Next.pdf" download >
+                <Button>Descargar CV</Button>
+            </a>
         </div>
     );
 };

@@ -32,7 +32,7 @@ const SectionSkills = () => {
                     className="flex relative flex-col text-venter snap-center h-screen w-full justify-center items-center z-[3]"
                 >
                     <h1 className='text-red text-[2rem] top-[12px] left-[2%] nunito absolute'>Habilidades y tiempo</h1>
-                    <div className="grid grid-cols-4 gap-[1rem] sm:gap-[2rem] z-[1] ">
+                    <div className="grid grid-cols-4 gap-[1rem] sm:gap-[2rem] z-[1] w-[90%] sm:w-auto ">
                         <Skills />
 
                     </div>
