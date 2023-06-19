@@ -13,28 +13,50 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { useEffect, useState } from 'react';
 import { Pagination } from "swiper";
 
-const Projects = () => {
 
+const Projects = () => {
+    const [dimension, setDimension] = useState({ width: 0 });
+    useEffect(() => {
+        const handleResize = () => {
+            setDimension({ width: window.innerWidth });
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener('resize', handleResize);
+
+        };
+    }, []);
+
+
+    const dimensions = Number(dimension.width)
+
+    const whitScreen = dimensions >= 601 && dimensions <= 850 ? 2 : dimensions <= 600 ? 1 : 3
     return (
         <>
+
             <Swiper
-                slidesPerView={3}
+
+                grabCursor={true}
+                slidesPerView={whitScreen}
+                centeredSlides={true}
                 spaceBetween={30}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className=" h-[90%!important] w-[90%!important] sm:h-auto sm:w-auto mt-[1rem!important] "
             >
                 {
                     ProjectsArray.map((project) => {
                         return (
-                            <SwiperSlide key={project.title} className="w-[70%]" >
+                            <SwiperSlide key={project.title} >
                                 <Card
                                     shadow={false}
-                                    className="relative grid h-[37rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center mt-3 "
+                                    className="relative grid h-[98%] sm:h-[37rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center mt-3 "
                                 >
                                     <CardHeader
                                         floated={false}
@@ -90,12 +112,11 @@ const Projects = () => {
                             </SwiperSlide>
 
 
-
-
                         )
 
                     })
                 }
+
             </Swiper>
         </>
 

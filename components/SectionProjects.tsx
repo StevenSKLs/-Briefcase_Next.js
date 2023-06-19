@@ -40,15 +40,7 @@ const SectionProjects = () => {
 
                     <h1 className='text-red text-[2rem] top-[9px] left-[2%] nunito absolute'>Proyectos</h1>
 
-                    {/* <div
-                        className=" w-full flex space-x-5 overflow-x-scroll p-[1.40rem] snap-x snap-mandatory h-[91vh] scrollbar  scrollbar-thumb-[#F7A00A]/80 scrollbar-track-[#F7A00A]/0 "
-                    >
-                        
-                    </div> */}
                     <Projects />
-
-
-
                 </motion.div>
             </div>
 
@@ -57,8 +49,3 @@ const SectionProjects = () => {
 };
 
 export default SectionProjects;
-
-{/* <div className=" rounded-lg flex items-center space-y-7 flex-shrink-0 w-[500px] snap-center bg-black p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden ">
-                            <h1>PROYECT3</h1>
-                            <ArrowTopRightOnSquareIcon className="h-6 w-6 text-gray-500" />
-                        </div> */}
