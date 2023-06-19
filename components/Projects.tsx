@@ -84,7 +84,7 @@ const Projects = () => {
 
                                             <Tooltip content="GitHub">
 
-                                                <Link href={project.deployments} target="_blank" >
+                                                <Link href={project.urlGithub} target="_blank" >
                                                     <Avatar
                                                         size="xl"
                                                         variant="circular"
@@ -95,7 +95,7 @@ const Projects = () => {
                                                 </Link>
                                             </Tooltip>
                                             <Tooltip content="Deploy">
-                                                <Link href={project.urlGithub} target="_blank" >
+                                                <Link href={project.deployments} target="_blank" >
                                                     <Avatar
                                                         size="xl"
                                                         variant="circular"
