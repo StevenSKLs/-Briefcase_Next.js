@@ -27,7 +27,7 @@ const Person = () => {
 
 
                 <div
-                    className=" flex flex-col relative h-full justify-center mx-auto items-center "
+                    className=" flex flex-col relative justify-center h-full mx-auto items-center "
                 >
                     <motion.div
                         initial={{
@@ -39,7 +39,7 @@ const Person = () => {
                         transition={{
                             duration: 1.4
                         }}
-                        className='flex gap-[1vw] sm:gap-[8vw] z-[2] items-center flex-col sm:flex-row sm:items-start '>
+                        className='flex gap-[1vw] sm:gap-[8vw] z-[2] justify-center items-center flex-col sm:flex-row sm:items-start '>
                         <div className='rounded-[2vh] bg_3 p-[1rem] order-2 sm:order-1 sm:w-[40%] w-[90%] '>
 
                             <h1 className='text-red font-semibold text-[3vh]  '>
