@@ -24,7 +24,7 @@ const ContactMe = () => {
         >
             <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] nunito'>Contacteme</h1>
 
-            <Card color="transparent" shadow={true} className=" w-[94%] px-[1rem] py-[10px] mt-[2rem] sm:mt-0 "
+            <Card color="transparent" shadow={true} className="sm:w-[61vh]  w-[94%] px-[1rem] py-[10px] mt-[2rem] sm:mt-0 "
                 style={{ background: 'radial-gradient(circle, rgb(255 255 255 / 30%) 53%, rgb(169 169 169 / 0%) 100%);' }}
             >
                 <Typography variant="h4" className='text-[#090C40] ' >
