@@ -11,8 +11,6 @@ const WorkExperience = () => {
             style={{ background: 'linear-gradient(110deg,rgb(255 255 255)-1%,rgb(147 147 147)44%)' }}
         >
             <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] nunito'>Experiencia Laboral</h1>
-
-
             <div className="flex gap-3 mt-[1rem] sm:w-auto w-full space-x-5 overflow-x-scroll p-[1.40rem] snap-x snap-mandatory h-[91vh] scrollbar scrollbar-thumb-[#F7A00A]/80 scrollbar-track-[#F7A00A]/0">
                 <Card className="sm:w-auto sm:max-w-[26rem] shadow-lg snap-center w-[54vh] ">
                     <CardHeader floated={false} className="w-[50vh] sm:w-auto " color="blue-gray">
@@ -21,7 +19,6 @@ const WorkExperience = () => {
                             alt="Banco"
                         />
                         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
-
                     </CardHeader>
                     <CardBody>
                         <div className="mb-3 flex items-center justify-between">
@@ -52,7 +49,6 @@ const WorkExperience = () => {
                             <Typography variant="h5" color="blue-gray" className="font-medium">
                                 Coworking Front-end
                             </Typography>
-
                         </div>
                         <Typography color="gray" className='text-[12px] sm:text-[15px]  ' >
                             Formé parte de un equipo que creó una aplicación web colaborativa para la búsqueda de residencias en México.
@@ -60,17 +56,8 @@ const WorkExperience = () => {
                         </Typography>
 
                     </CardBody>
-
                 </Card>
-
-
-
-
-
-
             </div>
-
-
         </div>
     );
 };

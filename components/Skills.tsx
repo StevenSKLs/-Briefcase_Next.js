@@ -29,7 +29,7 @@ const Skills = ({ directionLeft }: Props) => {
                             <div className="rounded-[20px] absolute opacity-0 group-hover:opacity-90 transtion duration-300 ease-in-out group-hover:bg-white h-full w-full z-0  ">
                                 <div className=" flex items-center justify-center h-full text-center "  >
                                     <p
-                                        className=" text-3xl font-bold text-black opscity-100  "
+                                        className=" text-[19px] sm:text-3xl font-bold text-black opscity-100  "
                                     >{skills.time}</p>
                                 </div>
                                 <p>{skills.title}</p>

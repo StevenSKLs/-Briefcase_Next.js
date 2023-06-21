@@ -12,13 +12,13 @@ const Cicles = () => {
                     // repeatDelay: 3
                 }}
 
-                className="relative flex justify-center items-center top-[20vh] z-[1]">
+                className="relative flex justify-center items-center top-[16vh] sm:top-[20vh] z-[1]">
 
                 <div className="absolute border border-[#333333] rounded-full h-[100px] w-[100px] mt-52 animate-ping " />
-                <div className="rounded-full border border-[#333333] h-[150px] w-[150px] absolute mt-52 z-10" />
-                <div className="rounded-full border border-[#333333] h-[450px] w-[450px] absolute mt-52 " />
-                <div className="rounded-full border-[2.6px] border-[#ff1100] h-[350px] w-[350px] absolute mt-52 animate-pulse" />
-                <div className="rounded-full border border-[#333333] h-[470px] w-[470px] absolute mt-52 " />
+                <div className="rounded-full border border-[#333333] sm:h-[150px] sm:w-[150px] h-[95px] w-[95px] absolute mt-52 z-10" />
+                <div className="rounded-full border border-[#333333] sm:h-[450px] sm:w-[450px] h-[225px] w-[225px] absolute mt-52 " />
+                <div className="rounded-full border-[2.6px] border-[#ff1100] sm:h-[350px] sm:w-[350px] h-[175px] w-[175px] absolute mt-52 animate-pulse" />
+                <div className="rounded-full border border-[#333333] sm:h-[470px] sm:w-[470px] h-[235px] w-[235px] absolute mt-52 " />
             </motion.div>
         </div>
     );

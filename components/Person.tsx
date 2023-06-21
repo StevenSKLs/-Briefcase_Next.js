@@ -5,26 +5,14 @@ import Image from 'next/image';
 const Person = () => {
     return (
         <>
-            <style jsx>{
-                `
-    .bg_2{
-         background: linear-gradient(108deg,rgb(249 249 249/48%)33%,rgba(252,252,252,1)53%,rgb(141 138 138)100%)
-    }
-   .bg_3{
-    background: linear-gradient(270deg, rgba(172,172,172,0.6558998599439776) 0%, rgba(255,255,255,0.6979166666666667) 23%)
-   }
-   
-
-    `
-            }
-            </style>
-            <div className="snap-center h-screen w-full bg_2 relative">
+            <div className="snap-center h-screen w-full relative"
+                style={{ background: 'linear-gradient(108deg,rgb(249 249 249/48%)33%,rgba(252,252,252,1)53%,rgb(141 138 138)100%)' }}
+            >
 
                 <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] z-[3] nunito'>Acerca de mí</h1>
                 <div className='absolute h-[65vh] w-[23vh] top-[35%] sm:h-[93vh] sm:w-[100vh] sm:top-[43px] z-[0] '>
                     <Image src={'/imgs/city30.png'} alt="user" fill />
                 </div>
-
 
                 <div
                     className=" flex flex-col relative justify-center h-full mx-auto items-center "
@@ -40,7 +28,9 @@ const Person = () => {
                             duration: 1.4
                         }}
                         className='flex gap-[1vw] sm:gap-[8vw] z-[2] justify-center items-center flex-col sm:flex-row sm:items-start '>
-                        <div className='rounded-[2vh] bg_3 p-[1rem] order-2 sm:order-1 sm:w-[40%] w-[90%] '>
+                        <div className='rounded-[2vh] p-[1rem] order-2 sm:order-1 sm:w-[40%] w-[90%] '
+                            style={{ background: 'linear-gradient(270deg, rgba(172,172,172,0.6558998599439776) 0%, rgba(255,255,255,0.6979166666666667) 23%)' }}
+                        >
 
                             <h1 className='text-red font-semibold text-[3vh]  '>
                                 Hola, Soy Steven David Rojas Miño</h1>
@@ -49,7 +39,7 @@ const Person = () => {
                                 Ecuador, Quito</h1>
 
                             <h1 className='text-red nunito'>
-                                2001/05/12</h1>
+                                12/05/2001</h1>
 
                             <motion.img
                                 initial={{
@@ -67,7 +57,7 @@ const Person = () => {
                                     once: true
                                 }}
                                 src="/others/user.jpeg" alt="hola"
-                                className=' w-[15vh] sm:w-[37vh] rounded-full z-[2] float-right sm:hidden  '
+                                className=' w-[15vh] sm:w-[37vh] ml-1 rounded-full z-[2] float-right sm:hidden  '
                             />
 
                             <p
@@ -90,7 +80,6 @@ const Person = () => {
                                 </a>
                             </div>
                         </div>
-
 
                         <div className='order-1 hidden sm:block' >
                             <motion.img
@@ -122,7 +111,6 @@ const Person = () => {
                             </div>
                         </div>
                     </motion.div>
-
 
                     <div className='absolute h-[75vh] w-[40vh] sm:h-[95vh] sm:w-[100vh] top-0 z-[0] '>
                         <Image src={'/imgs/city9.png'} alt="user" fill />

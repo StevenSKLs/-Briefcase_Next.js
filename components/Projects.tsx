@@ -30,8 +30,6 @@ const Projects = () => {
 
         };
     }, []);
-
-
     const dimensions = Number(dimension.width)
 
     const whitScreen = dimensions >= 601 && dimensions <= 850 ? 2 : dimensions <= 600 ? 1 : 3
@@ -39,7 +37,6 @@ const Projects = () => {
         <>
 
             <Swiper
-
                 grabCursor={true}
                 slidesPerView={whitScreen}
                 centeredSlides={true}
@@ -48,7 +45,7 @@ const Projects = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className=" h-[90%!important] w-[90%!important] sm:h-auto sm:w-auto mt-[1rem!important] "
+                className=" h-[90%!important] w-[90%!important] sm:h-auto sm:w-auto mt-[1rem!important]  "
             >
                 {
                     ProjectsArray.map((project) => {
@@ -73,7 +70,7 @@ const Projects = () => {
                                         <Typography
                                             variant="h2"
                                             color="white"
-                                            className="mb-6 font-medium leading-[1.5] absolute"
+                                            className="mb-6 font-medium leading-[1.5] text-[4.3vh!important] absolute"
                                         >
                                             {project.title}
                                         </Typography>
@@ -110,16 +107,11 @@ const Projects = () => {
                                     </CardBody>
                                 </Card>
                             </SwiperSlide>
-
-
                         )
-
                     })
                 }
-
             </Swiper>
         </>
-
     );
 };
 

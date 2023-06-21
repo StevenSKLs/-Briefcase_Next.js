@@ -14,33 +14,34 @@ const TextsInitial = () => {
 
     return (
         <>
-            <style jsx>{
-                `
-.textShadow{
-    text-shadow: 2px 2px 0#fffcfcc2, 0 0 1em blue;
-    
-}
+            <div className="absolute w-full sm:w-[120vh] flex flex-col justify-center text-center top-[2vh] z-[2] ">
+                <div>
+                    <h1 className=" text-[3.3vh] sm:text-[2.2rem]"
+                        style={{ textShadow: '2px 2px 0#fffcfcc2, 0 0 1em blue' }}
+                    >
+                        <span>
+                            {text}
+                        </span>
+                        <Cursor cursorColor="red" />
+                    </h1>
+                </div>
+                <div>
+                    <h2 className=" text-[15px] sm:text-[1.3rem] mt-[30%] ms:mt-[12.5rem] mb-[4rem]"
+                        style={{ textShadow: '2px 2px 0#fffcfcc2, 0 0 1em blue' }}
+                    >
+                        Estoy emocionado de compartir mi trabajo y proyectos a lo largo de mi estudio.
+                        <br />
+                        Si tienes alguna pregunta o estás interesado/a en colaborar, no dudes en contactarme.
+                    </h2>
+                    <h2 className=" text-red text-[15] sm:text-[1rem]"
+                        style={{ textShadow: '2px 2px 0#fffcfcc2, 0 0 1em blue' }}
+                    >
+                        Explora y descubre todo lo que tenemos para ofrecerte. Encuentra información, recursos y contenido relevante.
+                    </h2>
+                </div>
 
-`
-            }
-            </style>
-
-            <div className="absolute w-[80%] sm:w-[120vh] text-center top-[2vh] z-[2] ">
-                <h1 className="textShadow text-[2.4vh] sm:text-[2.2rem]">
-                    <span>
-                        {text}
-                    </span>
-                    <Cursor cursorColor="red" />
-                </h1>
-                <h2 className="textShadow text-[2vh] sm:text-[1.3rem] mt-[30%] ms:mt-[12.5rem] mb-[4rem]">
-                    Estoy emocionado de compartir mi trabajo y proyectos a lo largo de mi estudio.
-                    <br />
-                    Si tienes alguna pregunta o estás interesado/a en colaborar, no dudes en contactarme.
-                </h2>
-                <h2 className="textShadow text-red text-[1.5vh] sm:text-[1rem]">
-                    Explora y descubre todo lo que tenemos para ofrecerte. Encuentra información, recursos y contenido relevante.
-                </h2>
             </div>
+
         </>
     );
 };
