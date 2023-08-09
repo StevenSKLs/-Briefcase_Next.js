@@ -2,14 +2,11 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <div className=" w-full h-[6%] bg-blue-gray-600 flex justify-between absolute bottom-0 items-center ">
+        <div className=" w-full bg-blue-gray-600 flex justify-between absolute bottom-0 items-center ">
             <p className="text-[11px] sm:text-[17px] sm:gap-[4rem] justify-center ">
-                Estamos trabajando / Ultima actualizacion el 21/06/2023 Hora Mexico 1am
+                Estamos trabajando en un nuevo modelo / Ultima actualizacion el 05/08/2023
             </p>
-            <div className="relative w-[19%] h-full ">
-                <Image src={'/others/cat_word.gif'} alt="cat" fill />
-            </div>
-
+            <Image src={'/others/cat_word.gif'} alt="cat" width={80} height={100} />
         </div>
     );
 };

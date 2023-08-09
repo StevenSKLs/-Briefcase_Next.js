@@ -30,6 +30,7 @@ module.exports = withMT({
       fontFamily: {
         nunito: ['Nunito'],
         mulish: ['Mulish'],
+        eurostile: ['"eurostile", sans-serif'],
       },
       keyframes: {
         glow1: {
