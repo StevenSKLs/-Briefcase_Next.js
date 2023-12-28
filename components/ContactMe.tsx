@@ -20,12 +20,12 @@ const ContactMe = () => {
     return (
 
         <div className="snap-center h-screen w-full relative flex flex-col items-center justify-center"
-            style={{ background: 'radial-gradient(circle, rgba(191,191,191,0.9220063025210083) 14%, rgba(97,97,97,1) 100%)' }}
+        // style={{ background: 'radial-gradient(circle, rgba(191,191,191,0.9220063025210083) 14%, rgba(97,97,97,1) 100%)' }}
         >
             <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] nunito'>Contacteme</h1>
 
             <Card color="transparent" shadow={true} className="sm:w-[61vh]  w-[94%] px-[1rem] py-[10px] mt-[2rem] sm:mt-0 "
-                style={{ background: 'radial-gradient(circle, rgb(255 255 255 / 30%) 53%, rgb(169 169 169 / 0%) 100%);' }}
+            // style={{ background: 'radial-gradient(circle, rgb(255 255 255 / 30%) 53%, rgb(169 169 169 / 0%) 100%);' }}
             >
                 <Typography variant="h4" className='text-[#090C40] ' >
                     Medio de comunicación

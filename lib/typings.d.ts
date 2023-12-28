@@ -5,6 +5,7 @@ export interface Projects {
   description: string;
   urlGithub: string;
   deployments: string;
+  materia: string[];
 }
 
 export interface Skills {
@@ -12,4 +13,5 @@ export interface Skills {
   img: string;
   alt: string;
   time: string;
+  material: string;
 }
