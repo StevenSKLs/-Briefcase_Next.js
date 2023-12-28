@@ -52,12 +52,12 @@ const Projects = () => {
                         return (
                             <SwiperSlide key={project.title} >
                                 <Card
-                                    shadow={false}
+                                    shadow={true}
                                     className="relative grid h-[98%] sm:h-[37rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center mt-3 "
                                 >
                                     <CardHeader
                                         floated={false}
-                                        shadow={false}
+                                        shadow={true}
                                         color="transparent"
                                         className="absolute inset-0 m-0 h-full w-full rounded-none"
                                     >
@@ -70,7 +70,7 @@ const Projects = () => {
                                         <Typography
                                             variant="h2"
                                             color="white"
-                                            className="mb-6 font-medium leading-[1.5] text-[4.3vh!important] absolute"
+                                            className="mb-6 font-medium leading-[1.5] text-[1.7rem] absolute"
                                         >
                                             {project.title}
                                         </Typography>
@@ -79,18 +79,6 @@ const Projects = () => {
                                         </Typography>
                                         <div className="group mt-8 inline-flex flex-wrap items-center absolute top-[75%] gap-3">
 
-                                            <Tooltip content="GitHub">
-
-                                                <Link href={project.urlGithub} target="_blank" >
-                                                    <Avatar
-                                                        size="xl"
-                                                        variant="circular"
-                                                        alt="candice wu"
-                                                        className="border-2 border-white"
-                                                        src="/others/github.png"
-                                                    />
-                                                </Link>
-                                            </Tooltip>
                                             <Tooltip content="Deploy">
                                                 <Link href={project.deployments} target="_blank" >
                                                     <Avatar
