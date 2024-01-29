@@ -5,8 +5,9 @@ module.exports = withMT({
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    'path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}',
+    'path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}',
   ],
-  // Ensure these match with .storybook/preview.js
 
   theme: {
     extend: {
@@ -22,7 +23,9 @@ module.exports = withMT({
       },
       screens: {
         xs: '375px',
+        m25: '425px',
         sm: '600px',
+        m768: '768px',
         md: '900px',
         lg: '1200px',
         xl: '1536px',

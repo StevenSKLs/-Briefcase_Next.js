@@ -43,18 +43,10 @@ const ContactMe = () => {
                     <Button className="mt-6" color="gray" fullWidth type="submit" >
                         Crear Correo
                     </Button>
-                    {/* 
-                    <Button color="indigo">hola </Button>
-                    <Button color="teal">hola </Button> */}
-
                 </form>
             </Card>
-
-
-
             <Footer />
         </div>
-
     );
 };
 
