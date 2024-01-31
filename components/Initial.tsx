@@ -26,19 +26,13 @@ export default function Initial() {
                 priority
             />
 
-            <div className="absolute bottom-3 grid gap-2 w-[90%] text-center z-[4]" >
+            <div className="absolute bottom-3 grid w-[90%] text-center z-[4]" >
                 <h2 className=" text-[15px] sm:text-[1.3rem]  ms:mt-[12.5rem] mb-[2rem]"
                     style={{ textShadow: '2px 2px 0#fffcfcc2, 0 0 1em blue' }}
                 >
                     Estoy emocionado de compartir mi trabajo y proyectos a lo largo de mi estudio.
                     <br />
                     Si tienes alguna pregunta o estás interesado/a en colaborar, no dudes en contactarme.
-                </h2>
-                <h2 className=" text-red text-[15] sm:text-[1rem]"
-                    style={{ textShadow: '2px 2px 0#fffcfcc2, 0 0 1em blue' }}
-                >
-                    Explora y descubre todo lo que tenemos para ofrecerte.
-                    Encuentra información, recursos y contenido relevante.
                 </h2>
             </div>
         </section>

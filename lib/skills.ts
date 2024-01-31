@@ -128,7 +128,7 @@ const SkillsArray: Skills[] = [
       'linear-gradient(295deg, rgba(163,163,163,0.8407738095238095) 0%, rgba(111, 248, 93, 0.808) 41%)',
   },
   {
-    title: 'Visual Studio Code',
+    title: 'V.Studio Code',
     img: '/skills/visual-studio-code.png',
     alt: 'skills',
     material: 'VSC',

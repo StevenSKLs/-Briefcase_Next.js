@@ -1,6 +1,5 @@
 import { Button, Card, Input, Textarea, Typography } from "@material-tailwind/react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import Footer from "./Footer";
 
 type Inputs = {
     name: string,
@@ -9,7 +8,6 @@ type Inputs = {
 };
 
 const ContactMe = () => {
-
     const { register, handleSubmit, } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = (data) => {
         window.location.href = `mailto:steven.david.rojas.21@gmail.com?subject=${data.subjet}&body=Hola, mi nombre es ${data.message}. ${data.message} `
@@ -18,14 +16,11 @@ const ContactMe = () => {
     // "mailto:steven.david.rojas.21@gmail.com"
 
     return (
+        <section className=" h-full w-full relative grid place-content-center ">
 
-        <div className="snap-center h-screen w-full relative flex flex-col items-center justify-center"
-        // style={{ background: 'radial-gradient(circle, rgba(191,191,191,0.9220063025210083) 14%, rgba(97,97,97,1) 100%)' }}
-        >
-            <h1 className='text-red absolute text-[2rem] top-[12px] left-[2%] nunito'>Contacteme</h1>
+            <h1 className='text-red text-[2rem] my-3 w-full text-center'>Contacteme</h1>
 
             <Card color="transparent" shadow={true} className="sm:w-[61vh]  w-[94%] px-[1rem] py-[10px] mt-[2rem] sm:mt-0 "
-            // style={{ background: 'radial-gradient(circle, rgb(255 255 255 / 30%) 53%, rgb(169 169 169 / 0%) 100%);' }}
             >
                 <Typography variant="h4" className='text-[#090C40] ' >
                     Medio de comunicación
@@ -45,8 +40,7 @@ const ContactMe = () => {
                     </Button>
                 </form>
             </Card>
-            <Footer />
-        </div>
+        </section>
     );
 };
 

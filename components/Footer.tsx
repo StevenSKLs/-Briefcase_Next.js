@@ -2,12 +2,23 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <div className=" w-full bg-blue-gray-600 flex justify-between absolute bottom-0 items-center ">
-            <p className="text-[11px] sm:text-[17px] sm:gap-[4rem] justify-center ">
-                Estamos trabajando en un nuevo modelo / Ultima actualizacion el 2024
+        <footer className=" w-full h-[14vh] bg-blue-gray-600 items-center grid grid-cols-[3fr,1fr] ">
+
+            <p className="text-[11px] sm:text-[17px]  ">
+                Cualuier trabajo Web <br /> Ultima actualizacion el 2024
             </p>
-            <Image src={'/others/cat_word.gif'} alt="cat" width={80} height={100} />
-        </div>
+            <div className="relative w-full h-full">
+                <Image
+                    src='/others/cat_word.gif'
+                    alt=""
+                    style={{ objectFit: 'contain' }}
+                    sizes="500px"
+                    fill
+                    priority
+                />
+            </div>
+
+        </footer>
     );
 };
 

@@ -37,7 +37,6 @@ const ExampleComponent = () => {
     }, []);
 
     return (
-
         <Swiper
             slidesPerView={ancho}
             grid={{
@@ -56,7 +55,7 @@ const ExampleComponent = () => {
             {SkillsArray.map((materia, index) => (
                 <SwiperSlide key={index} className="h-[calc((100%-30px)/2)] px-2 ">
                     <motion.div
-                        className='mb-3 z-[3] my-2 py-1 m768:w-[70%] w-[80%] h-[14vh] rounded-t-[20px] border border-white inline-block '
+                        className='mb-3 z-[3] my-2 py-2 sm:py-1 m768:w-[70%] w-[80%] h-[14vh] rounded-t-[20px] border border-white inline-block '
                         style={{ background: 'linear-gradient(295deg, rgba(163,163,163,0.8407738095238095) 0%, rgba(255,255,255,0.6979166666666667) 41%)' }}
                         whileHover={{ background: `${materia.background}` }}
                     >
