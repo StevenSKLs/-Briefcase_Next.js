@@ -3,6 +3,7 @@
 import CarouselImage from '@/components/CarouselImage';
 import ContactMe from '@/components/ContactMe';
 import Footer from '@/components/Footer';
+import NotExisten from '@/components/NotExisten';
 import Projects from '@/components/Projects';
 import { Project } from '@/lib/typings';
 import { HomeIcon } from '@heroicons/react/20/solid';
@@ -12,7 +13,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function product({ recipes, projects }: { recipes: Project; projects: Project[] }) {
-  // if (!recipes) return <NotExisten />
+  if (!recipes) return <NotExisten />
   console.log(recipes)
   return (
     <main className="w-full h-full ">
