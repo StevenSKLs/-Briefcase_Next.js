@@ -5,7 +5,7 @@ import ContactMe from '@/components/ContactMe';
 import Footer from '@/components/Footer';
 import NotExisten from '@/components/NotExisten';
 import Projects from '@/components/Projects';
-import { Project } from '@/lib/typings';
+import { FieldsRecipe, Project } from '@/lib/typings';
 import { HomeIcon } from '@heroicons/react/20/solid';
 import { Typography } from '@material-tailwind/react';
 import { createClient } from 'contentful';
@@ -14,7 +14,9 @@ import Link from 'next/link';
 
 export default function product({ recipes, projects }: { recipes: Project; projects: Project[] }) {
   if (!recipes) return <NotExisten />
-  console.log(recipes)
+
+  console.log(projects)
+
   return (
     <main className="w-full h-full ">
       <Link href={'/'} className='fixed left-3 top-3 z-[4] '>
@@ -165,10 +167,10 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }: { params: Project }) {
+export async function getStaticProps({ params }: { params: FieldsRecipe }) {
   const { items } = await client.getEntries({
     content_type: 'protafolio',
-    "fields.slug": params.fields.slug
+    "fields.slug": params.slug
   })
 
   if (!items.length) {
@@ -181,7 +183,7 @@ export async function getStaticProps({ params }: { params: Project }) {
   }
 
   const allRes = await client.getEntries({ content_type: 'protafolio' });
-  const filterRes = allRes.items.filter(entry => entry.fields.slug !== params.fields.slug);
+  const filterRes = allRes.items.filter(entry => entry.fields.slug !== params.slug);
 
   return {
     props: {
