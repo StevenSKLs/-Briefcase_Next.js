@@ -4,7 +4,7 @@ import CarouselImage from '@/components/CarouselImage';
 import ContactMe from '@/components/ContactMe';
 import Footer from '@/components/Footer';
 import Projects from '@/components/Projects';
-import { FieldsRecipe, Project } from '@/lib/typings';
+import { Project } from '@/lib/typings';
 import { HomeIcon } from '@heroicons/react/20/solid';
 import { Typography } from '@material-tailwind/react';
 import { createClient } from 'contentful';
@@ -54,6 +54,7 @@ export default function product({ recipes, projects }: { recipes: Project; proje
               <CarouselImage images={recipes.fields.image[2].fields.file.url}
                 width={recipes.fields.image[2].fields.file.details.image.width}
                 height={recipes.fields.image[2].fields.file.details.image.height} />
+
               <Image
                 src={`https:${recipes.fields.image[2].fields.file.url}`}
                 alt=""
@@ -163,10 +164,10 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }: { params: FieldsRecipe }) {
+export async function getStaticProps({ params }: { params: Project }) {
   const { items } = await client.getEntries({
     content_type: 'protafolio',
-    "fields.slug": params.slug
+    "fields.slug": params.fields.slug
   })
 
   if (!items.length) {
@@ -179,7 +180,7 @@ export async function getStaticProps({ params }: { params: FieldsRecipe }) {
   }
 
   const allRes = await client.getEntries({ content_type: 'protafolio' });
-  const filterRes = allRes.items.filter(entry => entry.fields.slug !== params.slug);
+  const filterRes = allRes.items.filter(entry => entry.fields.slug !== params.fields.slug);
 
   return {
     props: {
