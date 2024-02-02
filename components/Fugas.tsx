@@ -50,7 +50,7 @@ const ExampleComponent = () => {
             }}
             navigation={true}
             modules={[Autoplay, Navigation, Grid]}
-            className="mySwiper !h-[60vh] sm:!h-[70vh] ">
+            className="mySwiper !h-[70vh] ">
 
             {SkillsArray.map((materia, index) => (
                 <SwiperSlide key={index} className="h-[calc((100%-30px)/2)] px-2 ">

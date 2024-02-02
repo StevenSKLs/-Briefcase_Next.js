@@ -4,7 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className=' sm:overflow-y-scroll sm:scrollbar-thin sm:scrollbar-thumb-red sm:scrollbar-track-[#ffffffec]' >
+      <title>Portafolio.TSX</title>
+      <link rel="icon" href="/imgs/city13.png" />
+      <body className=' ' >
         <Main />
         <NextScript />
       </body>

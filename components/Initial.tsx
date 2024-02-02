@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Cicles from './Cicles';
+import Circles from "./Circles";
 import TextsInitial from "./Texts-Initial";
 
 export default function Initial() {
@@ -14,7 +14,7 @@ export default function Initial() {
                 />
             </div>
             <TextsInitial />
-            <Cicles />
+            <Circles />
 
             <article className="absolute top-[5.7rem] sm:top-[15rem] left-[2.8rem] sm:left-[4rem] z-[7] h-[1px] w-[1px] animate-[glow1_7s_infinite]" />
             <article className="absolute top-[3.3rem] left-[8.5rem] sm:top-[7rem] sm:left-[17rem] z-[7] h-[1px] w-[1px] animate-[glow2_3s_infinite]" />

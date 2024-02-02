@@ -1,61 +1,62 @@
 'use client'
 
-import { Image_fields } from "@/lib/typings";
+import { MagnifyingGlassPlusIcon } from "@heroicons/react/20/solid";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-export default function CarouselImage({ children, images }: { children: React.ReactNode, images: Image_fields[] }) {
+export default function CarouselImage({ images, width, height }: { images: string; height: number; width: number }) {
     const [isMessageVisible, setIsMessageVisible] = useState(false);
 
     const toggleMessage = () => {
         setIsMessageVisible(!isMessageVisible);
     };
+
     return (
         <>
-            <motion.div
-                onClick={toggleMessage}
-                className="absolute top-0 h-[130%] right-0 left-0 flex items-end justify-center heredero"
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                whileHover={{ y: -25 }}
-            >
-                {children}
-            </motion.div>
+            <div className=' absolute top-0 bottom-0 right-0 left-0 z-[3] group  ' onClick={toggleMessage} >
+                <MagnifyingGlassPlusIcon className="h-10 w-10 text-light-blue-400 group-hover:text-white group-hover:bg-light-blue-400 bg-white absolute top-0 z-[2] rounded-[50%] border-2 border-light-blue-400 " />
+            </div>
+
             <AnimatePresence>
                 {isMessageVisible && (
-
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={6}
-                        loop={true}
-                        pagination={{
-                            clickable: true,
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.5 }}
+                        style={{
+                            position: "fixed",
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            backgroundColor: "rgba(0, 0, 0, 0.5)",
                         }}
-                        navigation={true}
-                        modules={[Pagination, Navigation]}
-                        className="mySwiper ">
-                        <div className="absolute bg-red top-0 right-0 z-20 h-10 w-10" onClick={toggleMessage}>
-                            X
-                        </div>
-                        {images.map((img, index) => (
-                            <SwiperSlide className=" !flex !justify-center px-[3%] " key={index} >
-                                <Image src={`https:${img.fields.file.url}`} alt=" "
-                                    style={{ objectFit: 'contain' }}
-                                    sizes="500px"
-                                    fill
-                                    priority
-                                />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                        onClick={toggleMessage}
+                        className='z-10'
+                    >
+                        <motion.div
+                            onClick={(e) => e.stopPropagation()}
+                            className='z-[11] w-[80%] '
+                        >
+                            <Image src={`https:${images}`} alt=" "
+                                width={width}
+                                height={height}
+                                priority
+                            />
+                        </motion.div>
+
+
+                    </motion.div>
                 )}
             </AnimatePresence>
+
         </>
     )
 }

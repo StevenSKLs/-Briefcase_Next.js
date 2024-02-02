@@ -1,6 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
 
-
 const TextsInitial = () => {
     return (
         <div className=" text-center  z-[6] absolute w-[80%] ">

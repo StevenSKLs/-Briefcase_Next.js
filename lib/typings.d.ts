@@ -1,4 +1,11 @@
 interface Fielimage {
+  contentType: string;
+  details: {
+    image: {
+      height: number;
+      width: number;
+    };
+  };
   fileName: string;
   url: string;
 }
@@ -15,19 +22,12 @@ export interface Image_fields {
   sys: string;
 }
 
-export interface ImageDetails {
+export interface FieldsRecipe {
+  deploy: string;
   description: string;
-  file: {
-    contentType: string;
-    details: {
-      image: {
-        height: number;
-        width: number;
-      };
-    };
-    fileName: string;
-    url: string;
-  };
+  image: Image_fields[];
+  tilte: string;
+  slug: string;
 }
 
 export interface Project {
@@ -36,6 +36,8 @@ export interface Project {
     description: string;
     image: Image_fields[];
     tilte: string;
+    slug: string;
+    tecno: Image_fields[];
   };
   sys: {
     createdAt: string;

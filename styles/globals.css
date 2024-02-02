@@ -11,6 +11,16 @@ body {
     rgba(56, 56, 56, 1) 99%
   );
 }
+/* overflow-y: scroll; */
+/* Estilos para navegadores WebKit (Chrome, Safari, etc.) */
+/* body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4caf50; /* Color del "thumb" (la parte que se mueve) */
+/* border-radius: 6px;  Bordes redondeados del "thumb" 
+} */
 
 *:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -20,6 +30,7 @@ img {
   user-select: none;
 }
 
+/* projecto */
 .drop:hover {
   filter: drop-shadow(2px 4px 6px rgb(255, 255, 255));
 }
@@ -46,6 +57,14 @@ img {
   );
 }
 
+.group:hover {
+  background: linear-gradient(
+    119deg,
+    rgba(255, 255, 255, 0.21332282913165268) 49%,
+    rgba(64, 253, 252, 0.7707457983193278) 94%,
+    rgba(29, 253, 251, 1) 100%
+  );
+}
 /* swiper */
 
 .swiper {
@@ -93,42 +112,6 @@ img {
 .swiper-button-next:hover {
   background-color: rgb(255, 251, 0);
   color: rgb(255, 255, 255) !important;
-}
-
-/* EFFECTOS */
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
-}
-
-.hover-underline-animation::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #0087ca;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-@keyframes estrellaAnimacion {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) translateX(100vw);
-    opacity: 0;
-  }
 }
 
 /* otros */
