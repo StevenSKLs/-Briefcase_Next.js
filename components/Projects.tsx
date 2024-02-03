@@ -52,7 +52,7 @@ const Projects = ({ recipes }: { recipes: Project[] }) => {
                             </motion.div>
                         </Link>
 
-                        <Link href={project.fields.deploy} target="_blank" className="h-[10vh] w-[10vh] absolute top-0 left-0 border-[2px] border-white bg-black rounded-[50%] p-[9px] drop " >
+                        <Link href={project.fields.deploy} target="_blank" className="h-[10vh] w-[10vh] absolute top-0 left-0 border-[2px] border-[#ff8139] bg-white rounded-[50%] p-[9px] drop " >
                             <Image
                                 src={"/projects/deploy.png"}
                                 alt=""

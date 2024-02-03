@@ -5,30 +5,28 @@ import ContactMe from '@/components/ContactMe';
 import Footer from '@/components/Footer';
 import NotExisten from '@/components/NotExisten';
 import Projects from '@/components/Projects';
-import { FieldsRecipe, Project } from '@/lib/typings';
+import { FieldsRecipe, General, Project } from '@/lib/typings';
 import { HomeIcon } from '@heroicons/react/20/solid';
 import { Typography } from '@material-tailwind/react';
 import { createClient } from 'contentful';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function product({ recipes, projects }: { recipes: Project; projects: Project[] }) {
+export default function product({ recipes, projects, general }: { recipes: Project; projects: Project[]; general: General[] }) {
   if (!recipes) return <NotExisten />
 
-  console.log(projects)
-
   return (
-    <main className="w-full h-full ">
-      <Link href={'/'} className='fixed left-3 top-3 z-[4] '>
-        <HomeIcon className="h-14 w-14 text-red rounded-[50%] border-2 border-red bg-white 
+    <main className="w-full h-full main2">
+      <Link href={'/'} className='fixed top-0 left-0 sm:left-2 sm:top-2 z-[4] '>
+        <HomeIcon className="h-10 sm:h-14 w-10 sm:w-14 text-red rounded-[50%] border-2 border-red bg-white 
         hover:bg-red hover:text-white hover:border-white" />
       </Link>
 
-      <Typography variant='h2' className='my-3 text-center'>
+      <Typography variant='h2' className=' text-center w-full p-3'>
         {recipes.fields.tilte}
       </Typography>
 
-      <section className='h-full w-full px-3 m768:px-12 mb-3'>
+      <section className='h-full w-full px-2 m768:px-12 mb-3'>
         <div className=' relative'>
           <Image
             src={`https:${recipes.fields.image[0].fields.file.url}`}
@@ -42,8 +40,8 @@ export default function product({ recipes, projects }: { recipes: Project; proje
           <article className='absolute top-0 right-0 grid grid-rows-2 w-[35%] h-[60%] gap-1 '>
             <div className='relative border-2 border-light-blue-400  '>
               <CarouselImage images={recipes.fields.image[1].fields.file.url}
-                width={recipes.fields.image[1].fields.file.details.image.width}
-                height={recipes.fields.image[1].fields.file.details.image.height} />
+                widthImg={recipes.fields.image[1].fields.file.details.image.width}
+                heightImg={recipes.fields.image[1].fields.file.details.image.height} />
               <Image
                 src={`https:${recipes.fields.image[1].fields.file.url}`}
                 alt=""
@@ -55,8 +53,8 @@ export default function product({ recipes, projects }: { recipes: Project; proje
             </div>
             <div className='relative border-2 border-light-blue-400 '>
               <CarouselImage images={recipes.fields.image[2].fields.file.url}
-                width={recipes.fields.image[2].fields.file.details.image.width}
-                height={recipes.fields.image[2].fields.file.details.image.height} />
+                widthImg={recipes.fields.image[2].fields.file.details.image.width}
+                heightImg={recipes.fields.image[2].fields.file.details.image.height} />
 
               <Image
                 src={`https:${recipes.fields.image[2].fields.file.url}`}
@@ -78,16 +76,50 @@ export default function product({ recipes, projects }: { recipes: Project; proje
               {recipes.fields.description}
             </p>
           </article>
+
+          <article className='grid grid-cols-4 absolute bottom-0 sm:right-0 left-0 sm:left-auto w-[30%] h-[20%] sm:h-[14%]'>
+            {recipes.fields.tecno.map((tecnos, index) => (
+              <div className='relative' key={index}>
+                <Image
+                  src={`https:${tecnos.fields.file.url}`}
+                  alt=""
+                  sizes="500px"
+                  fill
+                  priority
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            ))}
+          </article>
         </div>
       </section>
 
       <Typography variant='h3' className='mt-6 my-3 text-center'>
         Información
       </Typography>
-      <p className='text-center w-full text-base px-3 sm:px-12 '>
+      <p className='text-justify sm:text-center w-full text-base px-3 sm:px-12 '>
         {recipes.fields.description}
       </p>
-      <Typography variant='h3' className='mt-6 mb-3 text-center'>
+
+      <Typography variant='h3' className='mt-6 my-3 text-center'>
+        En la Web
+      </Typography>
+      <article className='w-full  grid place-content-center '>
+        <Link href={recipes.fields.deploy} target="_blank" className='grid grid-cols-2 w-[5ovw] border-2 p-4 items-center  border-[#ff8139] bg-black rounded-[20px] drop'>
+          <div className='h-[10vh] w-[10vh] border-[2px] border-[#ff8139] bg-white rounded-[50%] p-[9px] drop  '>
+            <Image
+              src={"/projects/deploy.png"}
+              alt=""
+              width={512} height={512}
+            />
+          </div>
+          <Typography variant='h3' color='white' className=' text-center'>
+            Deploy
+          </Typography>
+        </Link>
+      </article>
+
+      <Typography variant='h3' className='my-3 text-center'>
         Imagenes y Tecnológias
       </Typography>
       <section className='w-full h-screen grid sm:grid-cols-2 my-4 px-4 gap-2'>
@@ -107,8 +139,8 @@ export default function product({ recipes, projects }: { recipes: Project; proje
         </div>
         <article className='relative border-2 border-light-blue-400   '>
           <CarouselImage images={recipes.fields.image[0].fields.file.url}
-            width={recipes.fields.image[0].fields.file.details.image.width}
-            height={recipes.fields.image[0].fields.file.details.image.height} />
+            widthImg={recipes.fields.image[0].fields.file.details.image.width}
+            heightImg={recipes.fields.image[0].fields.file.details.image.height} />
           <Image
             src={`https:${recipes.fields.image[0].fields.file.url}`}
             alt=""
@@ -120,8 +152,8 @@ export default function product({ recipes, projects }: { recipes: Project; proje
 
         <article className='relative border-2 border-light-blue-400   '>
           <CarouselImage images={recipes.fields.image[1].fields.file.url}
-            width={recipes.fields.image[1].fields.file.details.image.width}
-            height={recipes.fields.image[1].fields.file.details.image.height} />
+            widthImg={recipes.fields.image[1].fields.file.details.image.width}
+            heightImg={recipes.fields.image[1].fields.file.details.image.height} />
           <Image
             src={`https:${recipes.fields.image[1].fields.file.url}`}
             alt=""
@@ -132,8 +164,8 @@ export default function product({ recipes, projects }: { recipes: Project; proje
         </article>
         <article className='relative border-2 border-light-blue-400    '>
           <CarouselImage images={recipes.fields.image[2].fields.file.url}
-            width={recipes.fields.image[2].fields.file.details.image.width}
-            height={recipes.fields.image[2].fields.file.details.image.height} />
+            widthImg={recipes.fields.image[2].fields.file.details.image.width}
+            heightImg={recipes.fields.image[2].fields.file.details.image.height} />
           <Image
             src={`https:${recipes.fields.image[2].fields.file.url}`}
             alt=""
@@ -145,7 +177,7 @@ export default function product({ recipes, projects }: { recipes: Project; proje
       </section>
       <Projects recipes={projects} />
       <ContactMe />
-      <Footer />
+      <Footer facebook={general[0].fields.media[1]} gmail={general[0].fields.media[0]} whatsapp={general[0].fields.media[2]} cat={general[0].fields.media[3]} />
     </main>
   );
 }
@@ -184,11 +216,12 @@ export async function getStaticProps({ params }: { params: FieldsRecipe }) {
 
   const allRes = await client.getEntries({ content_type: 'protafolio' });
   const filterRes = allRes.items.filter(entry => entry.fields.slug !== params.slug);
-
+  const res2 = await client.getEntries({ content_type: 'general' })
   return {
     props: {
       recipes: items[0],
       projects: filterRes,
+      general: res2.items,
     },
     revalidate: 1,
   }

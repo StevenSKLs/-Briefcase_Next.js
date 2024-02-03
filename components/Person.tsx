@@ -1,3 +1,4 @@
+import { Image_fields } from '@/lib/typings';
 import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -5,7 +6,7 @@ import Link from 'next/link';
 import ExampleComponent from './Fugas';
 import WorkExperience from './WorkExperience';
 
-export default function Person() {
+export default function Person({ user, city }: { user: Image_fields; city: Image_fields }) {
     return (
         <section className="w-full h-full relative">
 
@@ -18,8 +19,7 @@ export default function Person() {
                 className="grid sm:grid-cols-[1fr,3fr] w-full sm:px-[10%] h-full">
                 <div className=" hidden sm:block relative">
                     <Image
-                        src="/others/user.jpeg"
-                        alt=""
+                        src={`https:${user.fields.file.url}`} alt=" "
                         style={{ objectFit: 'contain' }}
                         sizes="500px"
                         fill
@@ -36,11 +36,10 @@ export default function Person() {
                         transition={{ duration: 1 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="w-[20%] m-2 z-[2] relative float-right sm:hidden"
+                        className="w-[17vh] h-[17vh] m-2 z-[2] relative float-right sm:hidden"
                     >
                         <Image
-                            src="/others/user.jpeg"
-                            alt=""
+                            src={`https:${user.fields.file.url}`} alt=" "
                             style={{ objectFit: 'contain' }}
                             className=" rounded-[20px]"
                             sizes="500px"
@@ -63,7 +62,9 @@ export default function Person() {
                 </div>
             </motion.div>
 
-            <Image src={'/imgs/city9.png'} alt="user" width={837} height={836}
+            <Image src={`https:${city.fields.file.url}`} alt=" "
+                width={city.fields.file.details.image.width}
+                height={city.fields.file.details.image.height}
                 className="absolute bottom-[40%] z-[-1] right-0" />
 
             <h1 className="text-red text-[2rem] mb-3 w-full text-center">Habilidades</h1>

@@ -62,3 +62,33 @@ export interface Project {
     updatedAt: string;
   };
 }
+
+export interface General {
+  fields: {
+    fondo: Image_fields[];
+    general: string;
+    media: Image_fields[];
+  };
+  sys: {
+    createdAt: string;
+    environment: {
+      sys: {
+        id: string;
+        linkType: string;
+        type: string;
+      };
+    };
+    id: string;
+    locale: string;
+    revision: number;
+    space: {
+      sys: {
+        id: string;
+        linkType: string;
+        type: string;
+      };
+    };
+    type: string;
+    updatedAt: string;
+  };
+}

@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.main1 {
   background: linear-gradient(
     99deg,
     rgba(255, 255, 255, 0) 40%,
     rgba(232, 232, 232, 1) 73%,
     rgba(115, 115, 115, 1) 90%,
     rgba(56, 56, 56, 1) 99%
+  );
+}
+
+.main2 {
+  background: linear-gradient(
+    106deg,
+    rgba(167, 167, 167, 0.7707457983193278) 2%,
+    rgba(255, 255, 255, 0.7287289915966386) 50%,
+    rgba(121, 121, 122, 1) 88%,
+    rgba(129, 129, 129, 1) 100%
   );
 }
 /* overflow-y: scroll; */
@@ -32,7 +42,7 @@ img {
 
 /* projecto */
 .drop:hover {
-  filter: drop-shadow(2px 4px 6px rgb(255, 255, 255));
+  filter: drop-shadow(2px 4px 6px rgb(255, 136, 0));
 }
 
 .project {
