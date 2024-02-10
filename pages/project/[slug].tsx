@@ -34,7 +34,7 @@ export default function product({ recipes, projects, general }: { recipes: Proje
             width={recipes.fields.image[0].fields.file.details.image.width}
             height={recipes.fields.image[0].fields.file.details.image.height}
             loading="lazy"
-            className='xl:w-full '
+            className='xl:w-full elemento-animado'
           />
 
           <article className='absolute top-0 right-0 grid grid-rows-2 w-[35%] h-[60%] gap-1 '>
@@ -177,7 +177,7 @@ export default function product({ recipes, projects, general }: { recipes: Proje
       </section>
       <Projects recipes={projects} />
       <ContactMe />
-      <Footer facebook={general[0].fields.media[1]} gmail={general[0].fields.media[0]} whatsapp={general[0].fields.media[2]} cat={general[0].fields.media[3]} />
+      <Footer media={general[0].fields.media} />
     </main>
   );
 }

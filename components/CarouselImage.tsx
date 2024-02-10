@@ -1,9 +1,7 @@
-'use client'
-
 import { ArrowPathRoundedSquareIcon, MagnifyingGlassPlusIcon } from "@heroicons/react/20/solid";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,9 +10,15 @@ export default function CarouselImage({ images, widthImg, heightImg }: { images:
     const [isMessageVisible, setIsMessageVisible] = useState(false);
     const [vertical, setVertical] = useState(false);
 
+    useEffect(() => {
+        setVertical(false);
+    }, [images]);
+
     const toggleMessage = () => {
         setIsMessageVisible(!isMessageVisible);
+        setVertical(false)
     };
+
     const handleClick = () => {
         setVertical(!vertical);
     };
@@ -45,7 +49,6 @@ export default function CarouselImage({ images, widthImg, heightImg }: { images:
                         onClick={toggleMessage}
                         className='z-10'
                     >
-
                         <motion.div
                             onClick={(e) => e.stopPropagation()}
                             className="z-[11] w-full sm:w-[80%]"
@@ -63,7 +66,6 @@ export default function CarouselImage({ images, widthImg, heightImg }: { images:
                     </motion.div>
                 )}
             </AnimatePresence>
-
         </>
     )
 }

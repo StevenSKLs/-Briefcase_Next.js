@@ -2,11 +2,10 @@ import { Image_fields } from "@/lib/typings";
 import Image from "next/image";
 import Circles from "./Circles";
 import TextsInitial from "./Texts-Initial";
-
 export default function Initial({ city0, city }: { city0: Image_fields; city: Image_fields }) {
     return (
         <section className="h-screen w-full relative flex flex-col items-center justify-center ">
-            <div className='absolute bottom-[33px] h-full w-full  ' >
+            <div className='absolute bottom-[33px] h-full w-full elemento-animado ' >
                 <Image src={`https:${city.fields.file.url}`} alt=" "
                     style={{ objectFit: 'contain' }}
                     sizes="500px"
@@ -17,11 +16,12 @@ export default function Initial({ city0, city }: { city0: Image_fields; city: Im
             <TextsInitial />
             <Circles />
 
-            <article className="absolute top-[5.7rem] sm:top-[15rem] left-[2.8rem] sm:left-[4rem] z-[7] h-[1px] w-[1px] animate-[glow1_7s_infinite]" />
-            <article className="absolute top-[3.3rem] left-[8.5rem] sm:top-[7rem] sm:left-[17rem] z-[7] h-[1px] w-[1px] animate-[glow2_3s_infinite]" />
+            <article className="absolute top-[5.7rem] sm:top-[15rem] left-[2.8rem] sm:left-[4rem] z-[7] h-[1px] w-[1px] animate-[glow1_7s_infinite] elemento-animado" />
+            <article className="absolute top-[3.3rem] left-[8.5rem] sm:top-[7rem] sm:left-[17rem] z-[7] h-[1px] w-[1px] animate-[glow2_3s_infinite] elemento-animado" />
+
             <Image src={`https:${city0.fields.file.url}`} alt=" "
                 style={{ objectFit: 'contain' }}
-                className="!w-auto !h-auto "
+                className="!w-auto !h-auto elemento-animado"
                 sizes="500px"
                 fill
                 priority

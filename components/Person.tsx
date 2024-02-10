@@ -1,10 +1,10 @@
 import { Image_fields } from '@/lib/typings';
+import { DocumentIcon } from '@heroicons/react/20/solid';
 import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import ExampleComponent from './Fugas';
-import WorkExperience from './WorkExperience';
 
 export default function Person({ user, city }: { user: Image_fields; city: Image_fields }) {
     return (
@@ -36,12 +36,11 @@ export default function Person({ user, city }: { user: Image_fields; city: Image
                         transition={{ duration: 1 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="w-[17vh] h-[17vh] m-2 z-[2] relative float-right sm:hidden"
+                        className="w-[18vh] h-[18vh] z-[2] relative float-right sm:hidden"
                     >
                         <Image
                             src={`https:${user.fields.file.url}`} alt=" "
                             style={{ objectFit: 'contain' }}
-                            className=" rounded-[20px]"
                             sizes="500px"
                             fill
                             priority
@@ -51,12 +50,12 @@ export default function Person({ user, city }: { user: Image_fields; city: Image
                         Desarrollador web full-stack apasionado por el arte y la tecnología. He completado el curso full-stack de Academlo y también tengo conocimientos en mecánica automotriz y electromecánica. <br />
                         Me gustaría aplicar mis habilidades y formar parte de un equipo de desarrollo web. Tengo experiencia en programación en Arduino, así como en tecnologías web como HTML, CSS, JavaScript, React.js, Node.js, TypeScript y Next.js. En mi tiempo libre, disfruto dibujar en Adobe Illustrator y salir a pasear con mi perro.
                     </p>
-                    <div className="flex gap-1 justify-center mt-[1rem]" >
-                        <Link href="/cv/CV-Next.pdf" download>
-                            <Button color='white' variant="outlined" className="bg-black drop-shadow-[black]">Descargar CV</Button>
-                        </Link>
-                        <Link href="/cv/CV-Next.pdf" target="_blank">
-                            <Button color='white' variant="outlined" className="bg-black drop-shadow-[amount] backdrop-invert" style={{ filter: 'invert(1)' }}>Ver CV</Button>
+                    <div className='grid place-content-center mt-4'>
+                        <Link href="https://drive.google.com/file/d/1ZBYR0Dg8HGLRNsX0AcB5LJiNur_xGctx/view?usp=drive_link" target="_blank" className='contents'>
+                            <Button className='grid grid-cols-2 gap-2 items-center rounded-none'>
+                                Ver CV
+                                <DocumentIcon className="h-6 w-6 text-blueLight justify-self-center" />
+                            </Button>
                         </Link>
                     </div>
                 </div>
@@ -65,13 +64,12 @@ export default function Person({ user, city }: { user: Image_fields; city: Image
             <Image src={`https:${city.fields.file.url}`} alt=" "
                 width={city.fields.file.details.image.width}
                 height={city.fields.file.details.image.height}
-                className="absolute bottom-[40%] z-[-1] right-0" />
+                className="absolute bottom-[40%] z-[-1] right-0 elemento-animado" />
 
             <h1 className="text-red text-[2rem] mb-3 w-full text-center">Habilidades</h1>
 
             <ExampleComponent />
 
-            <WorkExperience />
         </section>
     );
 }
