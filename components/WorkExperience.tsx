@@ -1,7 +1,9 @@
 import { Proyectos } from "@/lib/typings";
-import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
+// Swiper's CSS files do not expose TypeScript declarations.
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css';
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,10 +14,8 @@ const WorkExperience = ({ proyectos }: { proyectos: Proyectos[] }) => {
     const ancho = width > 768 ? 3 : width > 600 ? 2 : 1
 
     return (
-        <section className=" relative w-full h-full  "
-        >
+        <section className=" relative w-full h-full  ">
             <h1 className='text-red text-[2rem] my-3 w-full text-center'>Experiencia Laboral</h1>
-
             <Swiper
                 slidesPerView={ancho}
                 spaceBetween={30}
@@ -35,9 +35,9 @@ const WorkExperience = ({ proyectos }: { proyectos: Proyectos[] }) => {
                                     priority />
                             </div>
                             <div className="mb-3 h-[51%] px-2">
-                                <Typography variant="h5" color="blue-gray" className='my-2' >
+                                <h5 className='my-2 blue-gray' >
                                     {project.fields.title}
-                                </Typography>
+                                </h5>
                                 <p className="text-[12px] sm:text-[13px] text-justify">
                                     {project.fields.image.fields.description}
                                 </p>

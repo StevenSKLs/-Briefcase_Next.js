@@ -2,8 +2,11 @@ import SkillsArray from '@/lib/skills';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css';
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css/grid';
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css/navigation';
 import { Autoplay, Grid, Navigation } from 'swiper/modules';
 

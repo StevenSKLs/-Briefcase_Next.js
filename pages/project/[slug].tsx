@@ -7,7 +7,6 @@ import NotExisten from '@/components/NotExisten';
 import Projects from '@/components/Projects';
 import { FieldsRecipe, General, Project } from '@/lib/typings';
 import { HomeIcon } from '@heroicons/react/20/solid';
-import { Typography } from '@material-tailwind/react';
 import { createClient } from 'contentful';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,9 +21,9 @@ export default function product({ recipes, projects, general }: { recipes: Proje
         hover:bg-red hover:text-white hover:border-white" />
       </Link>
 
-      <Typography variant='h2' className=' text-center w-full p-3'>
+      <h2 className=' text-center w-full p-3'>
         {recipes.fields.tilte}
-      </Typography>
+      </h2>
 
       <section className='h-full w-full px-2 m768:px-12 mb-3'>
         <div className=' relative'>
@@ -69,9 +68,9 @@ export default function product({ recipes, projects, general }: { recipes: Proje
 
           <article className=' p-3 absolute bottom-0 left-0 w-[60%] hidden m768:block rounded-tr-[20px]'
             style={{ background: 'linear-gradient(0deg, rgba(34,193,195,0.8491771708683473) 0%, rgba(189,251,254,0.7847514005602241) 36%, rgba(45,238,253,0.4906337535014006) 100%)' }}>
-            <Typography variant='h5' className=' mb-2 text-center'>
+            <h5 className=' mb-2 text-center'>
               {recipes.fields.tilte}
-            </Typography>
+            </h5>
             <p className='text-[15px] text-justify'>
               {recipes.fields.description}
             </p>
@@ -94,16 +93,16 @@ export default function product({ recipes, projects, general }: { recipes: Proje
         </div>
       </section>
 
-      <Typography variant='h3' className='mt-6 my-3 text-center'>
+      <h3 className='mt-6 my-3 text-center'>
         Información
-      </Typography>
+      </h3>
       <p className='text-justify sm:text-center w-full text-base px-3 sm:px-12 '>
         {recipes.fields.description}
       </p>
 
-      <Typography variant='h3' className='mt-6 my-3 text-center'>
+      <h3 className='mt-6 my-3 text-center'>
         En la Web
-      </Typography>
+      </h3>
       <article className='w-full  grid place-content-center '>
         <Link href={recipes.fields.deploy} target="_blank" className='grid grid-cols-2 w-[5ovw] border-2 p-4 items-center  border-[#ff8139] bg-black rounded-[20px] drop'>
           <div className='h-[10vh] w-[10vh] border-[2px] border-[#ff8139] bg-white rounded-[50%] p-[9px] drop  '>
@@ -113,15 +112,15 @@ export default function product({ recipes, projects, general }: { recipes: Proje
               width={512} height={512}
             />
           </div>
-          <Typography variant='h3' color='white' className=' text-center'>
+          <h3 color='white' className=' text-center'>
             Deploy
-          </Typography>
+          </h3>
         </Link>
       </article>
 
-      <Typography variant='h3' className='my-3 text-center'>
+      <h3 className='my-3 text-center'>
         Imagenes y Tecnológias
-      </Typography>
+      </h3>
       <section className='w-full h-screen grid sm:grid-cols-2 my-4 px-4 gap-2'>
         <div className='grid grid-cols-4'>
           {recipes.fields.tecno.map((tecnos, index) => (

@@ -1,10 +1,12 @@
 import { Project } from "@/lib/typings";
-import { Typography } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css';
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css/grid';
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css/navigation';
 import { Grid, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -46,9 +48,9 @@ const Projects = ({ recipes }: { recipes: Project[] }) => {
                                 animate={{ y: 0, opacity: 1 }}
                                 whileHover={{ y: -25 }}
                             >
-                                <Typography variant="h6" className="h-[40%] w-full project rounded-t-[20px] pt-2">
+                                <h6 className="h-[40%] w-full project rounded-t-[20px] pt-2">
                                     {project.fields.tilte}
-                                </Typography>
+                                </h6>
                             </motion.div>
                         </Link>
 

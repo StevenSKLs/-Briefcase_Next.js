@@ -52,7 +52,11 @@ export default function Person({ user, city }: { user: Image_fields; city: Image
                     </p>
                     <div className='grid place-content-center mt-4'>
                         <Link href="https://drive.google.com/file/d/1ZBYR0Dg8HGLRNsX0AcB5LJiNur_xGctx/view?usp=drive_link" target="_blank" className='contents'>
-                            <Button className='grid grid-cols-2 gap-2 items-center rounded-none'>
+                            <Button className='grid grid-cols-2 gap-2 items-center rounded-none'
+                                placeholder={"Ver CV"}
+                                onPointerEnterCapture={undefined}
+                                onPointerLeaveCapture={undefined}
+                                onResize={undefined} onResizeCapture={undefined}>
                                 Ver CV
                                 <DocumentIcon className="h-6 w-6 text-blueLight justify-self-center" />
                             </Button>

@@ -1,8 +1,11 @@
 import { Image_fields } from "@/lib/typings";
 import Image from "next/image";
 import Link from "next/link";
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css';
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css/grid';
+// @ts-expect-error -- CSS side-effect import
 import 'swiper/css/pagination';
 import { Grid, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';

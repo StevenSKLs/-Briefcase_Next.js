@@ -1,3 +1,21 @@
+declare module '*.css';
+
+interface DatosCarga {
+  valorQ: number;
+  posX: number;
+  posY: number;
+}
+
+interface ResultadosN {
+  i: number;
+  j: number;
+  qi: number;
+  qj: number;
+  distancia: number;
+  energiaPar: number;
+  formulaTexto: string;
+}
+
 interface Fielimage {
   contentType: string;
   details: {
@@ -67,7 +85,7 @@ export interface General {
   fields: {
     general: string;
     fondo: Image_fields[];
-    certificados:Image_fields[];
+    certificados: Image_fields[];
     media: Image_fields[];
   };
   sys: {
