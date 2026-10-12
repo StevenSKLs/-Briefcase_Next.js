@@ -194,7 +194,7 @@ export default function CalculadoraFisica( { city }: { city: Image_fields }) {
               Resultado Final de Energía Total (U_T):
             </span>
             <span className="text-3xl font-mono font-bold text-blue-900">
-              {formatoCien(energiaTotal, 4)} Voltios
+              {formatoCien(energiaTotal, 4)} Julios
             </span>
           </div>
 
@@ -213,7 +213,7 @@ export default function CalculadoraFisica( { city }: { city: Image_fields }) {
                     {res.formulaTexto}
                   </div>
                   <div className="text-right text-gray-500 font-sans text-xs">
-                    U<sub>{res.i}{res.j}</sub> = <span className="font-mono text-gray-800 font-bold">{formatoCien(res.energiaPar, 3)} Voltios</span>
+                    U<sub>{res.i}{res.j}</sub> = <span className="font-mono text-gray-800 font-bold">{formatoCien(res.energiaPar, 3)} Julios</span>
                   </div>
                 </div>
               ))}
@@ -368,14 +368,14 @@ int main() {
         cout << "Remplazo : "<< endl;
         cout << "U_T = 0.5 x ( ";
         for (size_t k = 0; k < resultados.size(); k++) {
-            cout << "[" << formatoC2(resultados[k].energiaPar, 3) << " V]";
+            cout << "[" << formatoC2(resultados[k].energiaPar, 3) << " J]";
             if (k < resultados.size() - 1) cout << " + ";
         }
         cout <<" )"<< endl;
         cout << endl;
 
         cout << "Energia Total (U_T):"<< endl;
-        cout << formatoC2(energiaTotal, 4) << " Voltios"<< endl;
+        cout << formatoC2(energiaTotal, 4) << " Julios"<< endl;
         cout << endl;
         cout << "Desglose Matematico de Reemplazo (" << resultados.size() << " pares):"<< endl;
         for (size_t k = 0; k < resultados.size(); k++) {
@@ -388,7 +388,7 @@ int main() {
             cout << formatoCien(resultados[k].distancia, 2) << " m"<< endl;
             
             cout << "U_" << resultados[k].i << resultados[k].j << " = ";
-            cout << formatoC2(resultados[k].energiaPar, 3) << " Voltios"<< endl;
+            cout << formatoC2(resultados[k].energiaPar, 3) << " Julios"<< endl;
             cout << endl;
         }
     }
