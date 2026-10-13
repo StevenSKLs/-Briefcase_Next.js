@@ -1,9 +1,8 @@
 'use client';
 
-import { DatosCarga, ResultadosN } from "@/lib/typings";
-import { useState } from "react";
-import { Image_fields } from '@/lib/typings';
+import { DatosCarga, Image_fields, ResultadosN } from "@/lib/typings";
 import Image from "next/image";
+import { useState } from "react";
 
 const formatoCien = (numero: number, decimales: number = 4) => {
   if (numero === 0) return "0";
@@ -17,7 +16,7 @@ const formatoCien = (numero: number, decimales: number = 4) => {
   );
 };
 
-export default function CalculadoraFisica( { city }: { city: Image_fields }) {
+export default function CalculadoraFisica({ city }: { city: Image_fields }) {
   const [numCargas, setNumCargas] = useState<number>(0);
   const [cargas, setCargas] = useState<DatosCarga[]>([]);
   const [resultados, setResultados] = useState<ResultadosN[]>([]);
@@ -87,10 +86,10 @@ export default function CalculadoraFisica( { city }: { city: Image_fields }) {
 
   return (
     <div className="max-w-3xl w-full bg-white p-8 rounded-2xl shadow-xl border border-gray-100  relative">
-       <Image src={`https:${city.fields.file.url}`} alt=" "
-                width={city.fields.file.details.image.width}
-                height={city.fields.file.details.image.height}
-                className="absolute bottom-[40%] z-[-1] right-0 elemento-animado" />
+      <Image src={`https:${city.fields.file.url}`} alt=" "
+        width={city.fields.file.details.image.width}
+        height={city.fields.file.details.image.height}
+        className="absolute bottom-[40%] z-[-1] right-0 elemento-animado" />
       <h1 className="text-2xl font-bold text-gray-800 text-center mb-2">
         Calculadora del Sistema de Energía Potencial
       </h1>
@@ -226,7 +225,7 @@ export default function CalculadoraFisica( { city }: { city: Image_fields }) {
       </p>
       <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto text-xs text-gray-800 font-mono border border-gray-200">
         <code>{`
-        #include <iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 using namespace std;

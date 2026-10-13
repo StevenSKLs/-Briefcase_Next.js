@@ -1,7 +1,7 @@
-import { Image_fields } from "@/lib/typings";
+import { General } from "@/lib/typings";
 import Head from "next/head";
 import CalculadoraFisica from "../components/CalculadoraFisica";
-import { General} from "@/lib/typings";
+import CargaFija from "../components/CargaFija";
 import { getStaticProps } from "./api/api";
 
 export default function PaginaPortafolio({ general}: { general: General[] }) {
@@ -16,7 +16,7 @@ export default function PaginaPortafolio({ general}: { general: General[] }) {
         </span>
       </header>
       <CalculadoraFisica city={general[0].fields.fondo[1]}/>
-
+      <CargaFija city={general[0].fields.fondo[1]}/>
     </div>
   );
 }
